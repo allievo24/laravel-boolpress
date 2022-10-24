@@ -6,6 +6,8 @@ import ContactPage from './pages/ContactPage.vue';
 import AboutUs     from './pages/AboutUs.vue';
 import HomePage    from './pages/HomePage.vue';
 import BlogPage    from './pages/BlogPage.vue';
+import ErrorPage    from './pages/ErrorPage.vue';
+
 
 
 
@@ -23,16 +25,23 @@ const router =new VueRouter({
                     name:'AboutUs',
                     component:AboutUs
                 },
+                {
+                    path:'/Blog',
+                    name:'Blog',
+                    component:BlogPage
+                },
+                
                 
                 {
                     path:'/',
                     name:'Home',
                     component:HomePage
                 },
+                
                 {
-                    path:'/Blog',
-                    name:'Blog',
-                    component:BlogPage
+                    path:'/*',
+                    name:'Error',
+                    component:ErrorPage
                 },
             ]
 

@@ -36,7 +36,7 @@
 
 <script>
     export default {
-            name:'MyMain',
+            name:'BlogPage',
             data(){
                 return{
                     posts:[], 
