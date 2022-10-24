@@ -9,7 +9,7 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <li v-for="(link,index) in linkMenu" :key="index" class="nav-item">
-                    <a class="nav-link active" aria-current="page" :href="link.link">{{link.label}}</a>
+                    <router-link class="nav-link active" :to="{name: link.routName}">{{link.label}}</router-link>
                     </li>
                 </ul>
            </div>  
@@ -27,19 +27,19 @@ export default {
             linkMenu :[
                     {
                         label:'Home',
-                        link: '#',     
+                       routName: 'Home'     
                     },
                     {
                         label:'Blog',
-                        link: '#',     
+                        routName: 'Blog'     
                     },
                     {
                         label:'About-Us',
-                        link: '#',     
+                        routName: 'AboutUs'     
                     },
                     {
                         label:'Contact',
-                        link: '#',     
+                        routName: 'contact'     
                     },
                     
                 ]
